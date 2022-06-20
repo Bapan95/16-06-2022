@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Signatures Payment Voucher</title>
+	<style type="text/css">
+		body {
+			/* background-image: url(SAPL-Bill-Sample.jpg);*/
+			background-repeat: no-repeat;
+			background-position: top center;
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+
+		.dashed-td {
+			border-bottom: 1px dashed;
+		}
+
+		.dashed-span {
+			display: inline-block;
+			border-bottom: 1px dashed;
+			width: 70%;
+			padding: 7px 0px;
+		}
+
+		.city_p {
+			margin-bottom: 0;
+			margin-top: 5px;
+		}
+
+		@media print {
+			.noprint {
+				display: none;
+			}
+		}
+	</style>
+	<script src="js/common-functions.js"></script>
+	<script src="assets/plugins/jquery/jquery.min.js"></script>
+	<link href="js/datepicker.min.css" rel="stylesheet">
+	<link href="../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+		rel="stylesheet" />
+	<link href="assets/css/responsive.css" rel="stylesheet">
+	<script src="js/nav.js"></script>
+	<script src="js/common-functions.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+</head>
+
+<body>
+	<div class="container noprint">
+		<div class="row">
+
+
+
+		</div>
+		<br />
+	</div>
+	<!-- End Page Loader -->
+	<table width="98%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top: 100px;">
+		<tr>
+			<td align="left" valign="top"
+				style="font-size:px; font-family:Arial, sans-serif; border-top:1px solid #000;border-left:1px solid #000; border-right:1px solid #000;">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="25%" align="left" valign="top" style="padding:10px;"><img
+								src="assets/images/logo.jpg" width="225" height="86" /></td>
+						<td width="75%" valign="bottom" style="padding:10px;">
+							<br />
+							<p class="city_p"><b>Regd. Office:</b> &nbsp; 3/33, Brojomoni Debya Road Flat-D, 3rd Floor,
+								Kolkata - 700 061</p>
+							<p class="city_p"><b>City Office:</b> &nbsp; 783, D. H. Road Sakherbazar, Kolkata - 700 008
+							</p>
+							<p class="city_p"><b>Ph:</b> &nbsp; 033-2447 3472 &nbsp;&nbsp;&nbsp; <b>Email:</b> &nbsp;
+								signature.advertising15@gmail.com</p>
+						</td>
+						<!-- <td width="40%" valign="bottom" align="center"><span class="dashed-span"><strong>CIN NO:</strong> U74999WB2016 PTC 215681</span></td> -->
+					</tr>
+				</table>
+
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
+					<tr>
+						<td width="50%" align="right" valign="middle" style="font-weight: bold; font-size: 26px;"><span
+								style="border: 2px solid #000; width:20%; padding: 8px; border-radius: 10px;"> Edit Cash
+								/ Cheque Voucher</span></td>
+						<td width="15%" align="center" valign="middle"><span><strong>No.</strong> &nbsp;</span></span>
+						</td>
+
+						<td><input type="text" id="payment_number" valign="middle"
+								style="font-size:15px; padding-bottom: 10px;">
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;"></td>
+			</td>
+
+
+			<td width="5%" align="left" valign="middle"><span><strong>Date:</strong> &nbsp;
+
+			<td><input type="text" id="payment_date" name="payment_date" valign="middle"
+					style="font-size:15px; padding-bottom: 10px;">
+			<td align="left" valign="middle" style="padding:10px 0; font-size:15px;"></td>
+			</td>
+
+
+		</tr>
+	</table>
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="5%">&nbsp;</td>
+
+			<td class="dashed-td"></td>
+			<td width="2%">&nbsp;</td>
+		</tr>
+	</table>
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="5%">&nbsp;</td>
+			<td width="5%" align="left" valign="middle" style="padding:10px 0;"><strong>Pay to:</strong></td>
+
+			<!-- <td><input type="text"  id="ac_sub_head" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td> -->
+			<td align="left" valign="middle" style="padding:10px 0; font-size:22px;" class="dashed-td"><span
+					id="ac_sub_head"></span></td>
+			<td width="2%">&nbsp;</td>
+		</tr>
+	</table>
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="5%">&nbsp;</td>
+			<td width="5%" align="left" valign="middle" style="padding:10px 0;"><strong>Amount:</strong></td>
+
+			<td><input type="text" id="amount" valign="middle" style="font-size:15px; padding-bottom: 10px;">
+			<td align="left" valign="middle" style="padding:10px 0; font-size:15px;"></td>
+			</td>
+			<!-- <td align="left" valign="middle" style="padding:10px 0; font-size:22px;" ><span id="amount"></td> -->
+
+			<td width="2%">&nbsp;</td>
+		</tr>
+	</table>
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="5%">&nbsp;</td>
+			<td width="5%" align="left" valign="middle" style="padding:10px 0;"><strong>By - </strong><span></span></td>
+			<td><input type="text" id="payment_mode" valign="middle" style="font-size:15px; padding-bottom: 10px;">
+			<td align="left" valign="middle" style="padding:10px 0; font-size:15px;"></td>
+			</td>
+
+			<!-- <td align="left" valign="middle" style="padding:10px 0;" ><span id="cheque_no"></span></td> -->
+
+
+			<td><input type="text" id="cheque_no" valign="middle" style="font-size:15px; padding-bottom: 10px;">
+			<td align="left" valign="middle" style="padding:10px 0; font-size:15px;"></td>
+			</td>
+
+			<td align="left" valign="middle" style="padding:10px 0;"><strong>On</strong></td>
+			<td>
+				<select class="form-control" id="bank_name" style="padding:10px 0;" name="bank_name"
+					onchange="myfunction(this.value);">
+					<option value="selected">Select Bank</option>
+
+				</select>
+			</td>
+
+			<!-- <td><input type="text"  id="bank_name" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td> -->
+			<!-- <td align="left" valign="middle" style="padding:10px 0;" ><span id="bank_name">  </span></td> -->
+			<td width="5%" align="left" valign="middle" style="padding:10px 0;"><strong>Branch </strong><span </span>
+			</td>
+			<td><input type="text" readonly id="bank_add" valign="middle" style="font-size:15px; padding-bottom: 10px;">
+			<td align="left" valign="middle" style="padding:10px 0; font-size:15px;"></td>
+			</td>
+
+			<td align="left" valign="middle" style="padding:10px 0;"><strong>Date:</strong></td>
+			<td><input type="text" id="transaction_date" name="transaction_date" valign="middle"
+					style="font-size:15px; padding-bottom: 10px;">
+			<td align="left" valign="middle" style="padding:10px 0; font-size:15px;"></td>
+			</td>
+
+			<!-- <td align="left" valign="middle" style="padding:10px 0;" ><span id="transaction_date"></span></td> -->
+			<td width="2%">&nbsp;</td>
+		</tr>
+
+	</table>
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="5%">&nbsp;</td>
+
+
+			<td width="2%">&nbsp;</td>
+		</tr>
+	</table>
+	</td>
+
+	</tr>
+	<td align="center" style="font-size:18px;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+			<button onclick="editpaymentvoucheramount()" type="button" align="center"
+				style="color:green;font-size:25px; padding-bottom: 10px; margin-bottom: 20px;" value="Update"
+				class="btn btn-primary" id="btn">update </button>
+
+			<tr>
+				<td align="left" valign="top" style="font-size:18px; font-family:Arial, sans-serif;">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+
+
+
+							<!-- <td width="30%" valign="middle" align="center" style="border-right:1px solid #000; border-bottom:1px solid #000; padding:10px 50px;"> <strong>Authorised Signature</strong>
+		</td> -->
+							<td width="50%" valign="middle" align="center"
+								style="border-right:1px solid #000; border-bottom:1px solid #000;">
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<!--<td align="right" width="160" height="160" valign="middle"> <div id="stamp_container"></div> </td>-->
+
+									</tr>
+
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td height="20"></td>
+			</tr>
+		</table>
+
+
+		<script>
+			var payment_id = getParameterByName('payment_id');
+			$(document).ready(function () {
+				//getAppName();
+				isLogin();
+				getPaymentInfo();
+				createDatePicker();
+				getBankAndBranch();
+
+
+			});
+
+			function refresh_all() {
+				$("#bank_name").selectpicker('refresh');
+
+			}
+
+			function myFunction() {
+				window.print();
+			}
+
+			function getPaymentInfo() {
+				$.ajax({
+					type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+					url: "handler/ajax_payment_detail.php",
+					data: { payment_id: payment_id, action_type: 'VERDOR_PAYMENT_VOUCHER_PRINT' },
+					dataType: 'json', // what type of data do we expect back from the server
+					encode: true,
+					async: false
+				})
+					// using the done promise callback
+					.done(function (data) {
+						var resultHTML = '';
+						var total_day_amount = 0;
+						$("#payment_number").val(data.payment_details.payment_number);
+						$("#payment_date").val(data.payment_details.payment_date);
+						//$("#payment_mode").text(data.payment_details.payment_mode);
+
+						var mode = (data.payment_details.payment_mode);
+
+						//alert(mode);
+						if (mode == 'Bank') {
+							$("#payment_mode").val('Bank');
+						}
+						else {
+							$("#payment_mode").val('Cash');
+						}
+
+						if (data.payment_details.transaction_no != '') {
+							$("#cheque_no").val(data.payment_details.transaction_no);
+						}
+						else {
+						}
+						$("#bank_name").val(data.payment_details.bank_id);
+
+						$("#bank_add").val(data.payment_details.bank_head_office_address);
+						$("#transaction_date").val(data.payment_details.recpit_date);
+						// console.log(data.payment_details.recpit_date);
+
+
+						$("#amount").val(data.payment_details.payment_amt);
+
+
+						$("#ac_sub_head").text(data.payment_details.client_name);
+
+
+
+						console.log(data);
+					})
+					// using the fail promise callback
+					.fail(function (data) {
+						// show any errors
+						// best to remove for production
+						console.log(data);
+					});
+			}
+
+			function getBankAndBranch() {
+				// var bank_name=$("#bank_name").val();
+				// var branch_name=$("#bank_add").val();
+				$.ajax({
+					type: 'POST',
+					url: "handler/ajax_edit_cash_voucher.php",
+					data: { payment_id:payment_id, action_type: 'GET_BANK_NAME' },
+					dataType: 'json',
+					encode: true,
+
+				})
+
+
+					.done(function (data) {
+						var other_payment_bank_id = '';
+						$.each(data.bank_list_id, function (key, value) {
+							//  alert(value.bank_name);
+							other_payment_bank_id = value.bank_id;
+					// alert(other_payment_bank_id);
+
+						});
+
+						var resultHTML = '';
+						if (data.status) {
+							resultHTML += '<option value="">Select Bank </option>';
+							$.each(data.bank_list, function (key, value) {
+								var d = (value.bank_id == other_payment_bank_id) ? 'selected' : '';
+
+								 alert(value.bank_id);
+								resultHTML += '<option value="' + value.bank_id + '" ' + d + '>' + value.bank_name + '</option>';
+							});
+						}
+						else {
+							resultHTML = '<option value="">No Records Available</option>';
+						}
+						$("#bank_name").html(resultHTML);
+						// $("#bank_name").val(resultHTML);
+						$("#bank_name").selectpicker('refresh');
+						console.log(data);
+					})
+					// using the fail promise callback
+					.fail(function (data) {
+						console.log(data);
+					});
+
+
+			}
+
+			// .done(function (data) {
+			//                 var resultHTML = '';
+			//                 if (data.status) {
+			//                     resultHTML += '<option value="">select Bank</option>';
+			//                     $.each(data.ac_bank_list, function (key, value) {
+			//                         resultHTML += '<option value="' + value.bank_id + '">' + value.bank_name+ '</option>';
+			//                     });
+
+
+			//                 }
+			//                 else {
+			//                     resultHTML = '<option value="">No Records Available</option>';
+			//                 }
+
+			// 				$("#bank_name").html(resultHTML);
+			//       		 	 $("#bank_name").val(bank_id);
+			//        			 $('#bank_name').selectpicker('refresh');
+			//                 console.log(data);
+			//             })
+
+
+			//             // using the fail promise callback
+			//             .fail(function (data) {
+			//                 console.log(data);
+			//             });
+			// }
+			// $("#bank_name").change( function (){
+			//         getBank($("#bank_name").val());
+			//     });   
+
+
+
+
+
+
+			// function getBank(bank_id)
+			// {
+			// 	alert(bank_id);
+			// }
+
+
+
+
+
+
+
+
+
+
+			function myfunction() {
+				var bank_id = document.getElementById("bank_name").value;
+				// alert(bank_id);
+				$.ajax({
+					type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+					url: "handler/ajax_edit_cash_voucher.php",
+					data: { bank_id: bank_id, action_type: 'GET_BRANCH_NAME' },
+					dataType: 'json', // what type of data do we expect back from the server
+					encode: true
+				})
+					// using the done promise callback
+					.done(function (data) {
+						var resultHTML = '';
+
+
+						if (data.status) {
+
+							$.each(data.branch_list, function (key, value) {
+
+								resultHTML = '' + value.branch + '';
+
+
+							});
+						}
+						else {
+							resultHTML = '<span>No Records Available</span>';
+						}
+						$("#bank_add").val(resultHTML);
+
+						$("#bank_add").selectpicker('refresh');
+					})
+					// using the fail promise callback
+					.fail(function (data) {
+						console.log(data);
+					});
+
+
+
+
+
+
+
+			}
+
+
+
+			function createDatePicker() {
+
+
+
+				var start_date = $('#payment_date').datepicker({
+					autoclose: true,
+					todayHighlight: true,
+					format: 'dd-mm-yyyy'
+				}).on('changeDate', function (ev) {
+					if (ev.date.valueOf() > end_date.datepicker("getDate").valueOf()) {
+
+						end_date.datepicker("update", "");
+					}
+					end_date.datepicker("update");
+				});
+				$('#payment_date').on('show', function (e) {
+					if (e.date) { $(this).data('stickyDate', e.date); }
+					else { $(this).data('stickyDate', null); }
+				}).on('hide', function (e) {
+					var stickyDate = $(this).data('stickyDate');
+					if (!e.date && stickyDate) { $(this).datepicker('setDate', stickyDate); $(this).data('stickyDate', null); }
+				});
+
+
+				var start_date = $('#transaction_date').datepicker({
+					autoclose: true,
+					todayHighlight: true,
+					format: 'dd-mm-yyyy'
+				}).on('changeDate', function (ev) {
+					if (ev.date.valueOf() > end_date.datepicker("getDate").valueOf()) {
+
+						end_date.datepicker("update", "");
+					}
+					end_date.datepicker("update");
+				});
+				$('#transaction_date').on('show', function (e) {
+					if (e.date) { $(this).data('stickyDate', e.date); }
+					else { $(this).data('stickyDate', null); }
+				}).on('hide', function (e) {
+					var stickyDate = $(this).data('stickyDate');
+					if (!e.date && stickyDate) { $(this).datepicker('setDate', stickyDate); $(this).data('stickyDate', null); }
+				});
+
+
+			}
+
+
+			function editpaymentvoucheramount() {
+
+				var value = $("#amount").val();
+				var payment_number = $("#payment_number").val();
+				var transaction_no = $("#cheque_no").val();
+
+				// var ac_sub_head=$("#ac_sub_head").val();
+				var payment_mode = $("#payment_mode").val();
+				var payment_date = $("#payment_date").val();
+				var recpit_date = $("#transaction_date").val();
+				var bank_name = $("#bank_name").val();
+
+
+
+				$.ajax({
+					type: 'POST',
+					url: "handler/ajax_edit_cash_voucher.php",
+					data: { payment_id: payment_id, value: value, transaction_no: transaction_no, payment_mode: payment_mode, payment_number: payment_number, payment_date: payment_date, recpit_date: recpit_date, bank_name: bank_name, action_type: 'EDIT_VOUCHER_AMOUNT' },
+					dataType: 'json',
+					encode: true,
+					async: false
+				})
+
+					.done(function (data) {
+						console.log(data);
+
+						if (data.key = 'S') {
+							window.location.href = "../payment_list.html";
+
+						}
+					})
+
+					.fail(function (data) {
+
+						console.log(data);
+					});
+			}
+
+
+
+
+			$(document).ready(function () {
+				$("#btn").click(function () {
+					alert("Updated Successfully");
+				});
+			});
+
+		</script>
+</body>
+
+</html>

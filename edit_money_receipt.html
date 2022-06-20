@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Signatures Payment Voucher</title>
+<style type="text/css">
+body {/* background-image: url(SAPL-Bill-Sample.jpg);*/ background-repeat: no-repeat; background-position:top center; margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;}
+.dashed-td{
+	border-bottom: 1px dashed;
+}
+.dashed-span{
+	display: inline-block;
+	border-bottom: 1px dashed;
+	width: 70%;
+	padding: 7px 0px;
+}
+.city_p{
+	margin-bottom: 0;
+	 margin-top: 5px;
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+}
+</style>
+<script src="js/common-functions.js"></script>
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+<link href="js/datepicker.min.css" rel="stylesheet">
+<link href="../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+<link href="assets/css/responsive.css" rel="stylesheet">
+    <script src="js/nav.js"></script> 
+    <script src="js/common-functions.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+</head>
+
+<body>
+<div class="container noprint">
+   
+<br /> 
+</div>
+<!-- End Page Loader -->
+<table width="98%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top: 100px;">
+   <tr>
+        <td align="left" valign="top" style="font-size:18px; font-family:Arial, sans-serif; border-top:1px solid #000;border-left:1px solid #000; border-right:1px solid #000;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+				<td colspan="2">
+				<br />
+				<br />
+                    <td width="35%" align="left" valign="top" style="padding: 26px 57px;"><img src="assets/images/logo.jpg" width="225" height="86" /></td>
+					<td width="65%" valign="bottom" style="padding:10px;">
+						
+						<p class="city_p"><b>Regd. Office:</b> &nbsp; 3/33, Brojomoni Debya Road  Flat-D, 3rd Floor, Kolkata - 700 061</p>
+						<p class="city_p"><b>City Office:</b> &nbsp; 783, D. H. Road Sakherbazar, Kolkata - 700 008</p>
+						<p class="city_p"><b>Ph:</b> &nbsp; 033-2447 3472 &nbsp;&nbsp;&nbsp;<b>Mobile:</b> (+91) 9331021671</p>
+						<p class="city_p"><b>Email:</b> &nbsp; signature.advertising15@gmail.com / barun@signatureadv.in</p>
+						<p class="city_p"><b>CIN No.</b> &nbsp; U7499WB2016PTC215681&nbsp;&nbsp;&nbsp;<b>MSME No.</b> (+91) WB18F0027702</p>
+					</td>
+					<td >
+                    <!-- <td width="40%" valign="bottom" align="center"><span class="dashed-span"><strong>CIN NO:</strong> U74999WB2016 PTC 215681</span></td> -->
+                </tr>
+				
+		   </table>
+		   
+           <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
+                <tr>
+                    <td width="60%" align="right" valign="middle" style="font-weight: bold; font-size: 26px;"><span style="border: 2px solid #000; width:20%; padding: 8px; border-radius: 10px;">Edit Money Receipt</span></td>
+                    <td width="5%" align="center" valign="middle"><strong>No.</strong> &nbsp; </span>
+					</td>
+
+					<td><input type="text"  id="payment_number" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td>
+
+					<!-- <input type="text" id="payment_number" valign="middle" style="font-size:15px; padding-bottom: 10px;"> -->
+
+
+
+                    <td width="5%" align="center" valign="middle"><strong>Date:</strong> &nbsp;</span></span></td>
+					<td><input type="text"  id="payment_date" name="payment_date" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td>
+                </tr>
+	       </table>   
+            
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 20px;" >
+                <tr>
+                    <td width="5%">&nbsp;</td>
+					
+                    <td align="left" valign="middle" style="padding:10px 0; font-size:22px;" class="dashed-td"><span id="received_with_thanks_from"></span></td>
+					<td width="2%">&nbsp;</td>
+                </tr>
+	        </table>
+            <!-- <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="5%">&nbsp;</td>
+                    <td width="15%" align="left" valign="middle" style="padding:10px 0;" class="dashed-td"><strong>Pay to:</strong></td>
+                    <td align="left" valign="middle" style="padding:10px 0; font-size:22px;" class="dashed-td"><span id="ac_sub_head"></span></td>
+					<td width="2%">&nbsp;</td>
+                </tr>
+	        </table> -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="5%">&nbsp;</td>
+					<td width="5%" align="left" valign="middle" style="padding:10px 0;" ><strong>Amount:-</strong></td>
+
+					<td><input type="text"  id="amount" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+					<td align="left" valign="middle" style="padding:10px 0; font-size:22px;" ></td></td>
+					
+					
+					<td width="2%">&nbsp;</td>
+                </tr>
+	       </table>
+		   
+		   <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td width="5%">&nbsp;</td>
+					<td width="5%" align="left" valign="middle" style="padding:10px 0;" ><strong>by - </span></strong></td>
+					
+					<td><input type="text"  id="payment_mode" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td>
+
+
+				<!-- <td align="left" valign="middle" style="padding:10px 0;"><span id="cheque_no"></span></td> -->
+					<td><input type="text"  id="cheque_no" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:5px 0; font-size:15px;" ></td></td>
+
+                    <td align="left" valign="middle" style="padding:10px 0;"><strong>On</strong></td>
+					
+					<td><input type="text"  id="bank_name" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td>
+
+					<!-- <td align="left" valign="middle" style="padding:10px 0;"><span id="bank_name"></span></td> -->
+
+					<td align="left" valign="middle" style="padding:10px 0;"><strong>Branch</strong></td>
+
+					<td><input type="text"  id="branch_name" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td>
+                    <!-- <td align="left" valign="middle" style="padding:10px 0;"><span id="branch_name"></span></td> -->
+					<td align="left" valign="middle" style="padding:10px 0;"><strong>Account no:-</strong></td>
+					<td><input type="text"  id="account_no" valign="middle" style="font-size:15px; padding-bottom: 10px;" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td>
+
+                    <!-- <td align="left" valign="middle" style="padding:10px 0;"><span id="account_no"></span></td> -->
+
+                    <td align="left" valign="middle" style="padding:10px 0;" ><strong>Date:</strong></td>
+					<td><input type="text"  id="branch_date" name="branch_date" style="font-size:15px; padding-bottom: 10px;"id="branch_date" >
+						<td align="left" valign="middle" style="padding:10px 0; font-size:15px;" ></td></td>
+                    <!-- <td align="left" valign="middle" style="padding:10px 0;" ><span id="branch_date"></span></td> -->
+					<td width="2%">&nbsp;</td>
+                </tr>
+	       </table>
+           <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td width="5%">&nbsp;</td>
+					
+					<td align="left" valign="middle" style="padding:10px 0;" ><span id="invoice_no"></span></td>
+					<!-- <td width="15%" align="left" valign="middle" style="padding:10px 0;" class="dashed-td"><strong>Date</strong></td> -->
+					<!-- <td align="left" valign="middle" style="padding:10px 0;" class="dashed-td"><span id="invoice_date"></span></td> -->
+					<td width="2%">&nbsp;</td>
+                </tr>
+	       </table>
+       </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" style="font-size:18px; font-family:Arial, sans-serif;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <!-- <td width="35%" valign="middle" style="border-left:1px solid #000; border-bottom:1px solid #000;padding: 10px 0px 0 62px;"><p style="border: 3px solid #000;width: 81%;padding: 13px;border-radius: 20px;font-size: 22px;text-align: center;"><strong>Rs: <span id="amount2"></span></strong></p> </td> -->
+        <!--<td width="15%" valign="middle" style="border-bottom:1px solid #000; padding:10px 50px;"><strong></strong> </td>-->
+		<td align="center" style="font-size:18px; "><table width="100%" border="0" cellspacing="0" cellpadding="0">
+     
+
+			<button onclick="editpaymentamount()" type="button" padding="10px" align="center" style="color:green; font-size:22px; padding-bottom: 10px;" value="update" class="btn btn-primary" id="btn">update </button>
+
+
+        <td width="55%" valign="middle" align="right" style="border-right:1px solid #000; border-bottom:1px solid #000; padding:10px 50px;">
+			<table border="0" cellspacing="0" cellpadding="0">
+             
+  
+            </table>
+		</td>  
+      </tr>
+    </table></td>
+  </tr>
+  <tr><td height="20"></td></tr> </table>
+      
+
+<script>
+var received_id = getParameterByName('received_id');
+$(document).ready(function(){
+	//getAppName();
+	isLogin();
+	getReciptInfo();
+	
+	createDatePicker();
+});
+
+
+var stamp = '';
+var sign = '';
+
+
+function myFunction() 
+{
+  window.print();
+}  
+
+function getReciptInfo(){
+	$.ajax({
+		type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+		url:  "handler/ajax_payment_detail.php",
+		data :{ received_id: received_id, action_type: 'RECIPT_VOUCHER' },
+		dataType: 'json', // what type of data do we expect back from the server
+		encode: true,
+		async: false
+	})
+	// using the done promise callback
+	.done(function(data) {
+		var resultHTML = '';
+		console.log('success');
+		console.log(data);
+		var total_day_amount = 0;
+		$("#payment_number").val(data.receipt_details.receipt_no);
+		$("#payment_date").val(data.receipt_details.payment_date);
+		// alert(data.receipt_details.payment_date);
+		$("#received_with_thanks_from").val(data.receipt_details.client_name);
+		$("#payment_mode").val(data.receipt_details.payment_mode);		
+		$("#cheque_no").val(data.receipt_details.transaction_no);			
+		$("#bank_name").val(data.receipt_details.bank_name);
+		//alert(data.receipt_details.branch_name);
+		$("#branch_name").val(data.receipt_details.branch_name);
+		$("#account_no").val(data.receipt_details.account_no);
+		$("#branch_date").val(data.receipt_details.date);
+		
+		$("#amount").val(data.receipt_details.amount);
+		$("#amount2").text(data.receipt_details.amount);
+		//$("#amount2").text(data.receipt_details.amount);
+		
+		
+
+		
+	})
+	// using the fail promise callback
+	.fail(function(data) {
+		// show any errors
+		// best to remove for production
+		console.log('fail');
+		console.log(data);
+	});
+	
+} 
+
+ function createDatePicker()
+ {
+	var start_date = $('#branch_date').datepicker({
+	autoclose: true,
+	todayHighlight: true,
+	format: 'dd/mm/yyyy'
+}).on('changeDate', function (ev) {
+    if (ev.date.valueOf() > end_date.datepicker("getDate").valueOf()) {
+       
+        end_date.datepicker("update", "");
+    }
+	end_date.datepicker("update");
+});
+$('#branch_date').on('show', function(e){
+	if ( e.date ) { $(this).data('stickyDate', e.date); }
+	else { $(this).data('stickyDate', null); }
+}).on('hide', function(e){
+	var stickyDate = $(this).data('stickyDate');
+	if ( !e.date && stickyDate ) { $(this).datepicker('setDate', stickyDate); $(this).data('stickyDate', null); }
+});
+
+
+var start_date = $('#payment_date').datepicker({
+	autoclose: true,
+	todayHighlight: true,
+	format: 'dd/mm/yyyy'
+}).on('changeDate', function (ev) {
+    if (ev.date.valueOf() > end_date.datepicker("getDate").valueOf()) {
+       
+        end_date.datepicker("update", "");
+    }
+	end_date.datepicker("update");
+});
+$('#payment_date').on('show', function(e){
+	if ( e.date ) { $(this).data('stickyDate', e.date); }
+	else { $(this).data('stickyDate', null); }
+}).on('hide', function(e){
+	var stickyDate = $(this).data('stickyDate');
+	if ( !e.date && stickyDate ) { $(this).datepicker('setDate', stickyDate); $(this).data('stickyDate', null); }
+});
+
+
+
+
+ }
+
+function editpaymentamount()
+	{
+
+       
+
+		var value = $("#amount").val();
+		// var payment_number=$("#payment_number").val();
+		var payment_mode=$("#payment_mode").val();
+		var receipt_no=$("#payment_number").val();
+		var date=$("#branch_date").val();
+		var payment_date=$("#payment_date").val();
+
+		var account_no=$("#account_no").val();
+		var bank_name=$("#bank_name").val();
+		var branch_name=$("#branch_name").val();
+		var cheque_no=$("#cheque_no").val();
+
+
+		$.ajax({
+		type: 'POST', 
+		url:  "handler/ajax_payment_details_edit.php",
+		data :{ received_id: received_id, value: value,payment_mode:payment_mode,receipt_no:receipt_no,date:date,payment_date:payment_date,account_no:account_no,bank_name:bank_name,branch_name:branch_name,cheque_no:cheque_no, action_type: 'EDIT_PAYMENT_AMOUNT' },
+		dataType: 'json', 
+		encode: true,
+		async: false
+	})
+
+	.done(function (data) {
+          console.log(data);
+
+          if (data.key = 'S') {
+            window.location.href = "../receipt_list.html";
+           
+          }
+        })
+      
+        .fail(function (data) {
+         
+          console.log(data);
+        });
+
+		
+	}
+
+
+
+	
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                alert("Updated Successfully");
+            });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Signatures receipt Voucher</title>
+    <style type="text/css">
+        body {
+            /* background-image: url(SAPL-Bill-Sample.jpg);*/
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+
+        .dashed-td {
+            border-bottom: 1px dashed;
+        }
+
+        .dashed-span {
+            display: inline-block;
+            border-bottom: 1px dashed;
+            width: 70%;
+            padding: 7px 0px;
+        }
+
+        .city_p {
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
+
+        @media print {
+            .noprint {
+                display: none;
+            }
+        }
+    </style>
+    <link href="js/datepicker.min.css" rel="stylesheet">
+    <script src="js/common-functions.js"></script>
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container noprint">
+        <div class="row">
+            <div class="col-sm-3 ;">
+                <div id="back_div">
+                    <!-- <button type="button" onclick="backFunction()" style="background-color: #6B1D49; background-image: none;cursor: pointer;display: inline-block;font-size: 18px; padding:6px 25px; margin-top:15px; margin-left:15px; color:#fff; border:none; border-radius:5px; float: right;">Back</button> -->
+                    <a href="other_receipt_list.html" id="backbtn" class="btn btn-sm btn-primary waves-effect"
+                        style="background-color: #6B1D49; background-image: none;cursor: pointer;display: inline-block;font-size: 24px; padding:6px 25px; margin-top:15px; margin-left:15px; color:#fff; border:none; border-radius:5px; float: right;text-decoration: none;">Back</a>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <!-- End Page Loader -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top: 10px;"><br>
+        <tr>
+            <td width="100%" style="border-left:1px  red; border-bottom:1px solid rgb(160, 38, 38); padding:10px 50px;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"></table>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td width="25%" align="left" valign="top" style="padding:10px;"><img src="assets/images/logo.jpg"
+                    width="225" height="86" /></td>
+            <td width="75%" valign="bottom" style="padding:10px;">
+                <br />
+                <p class="city_p"><b>Regd. Office:</b> &nbsp; 3/33, Brojomoni Debya Road Flat-D, 3rd Floor,
+                    Kolkata - 700 061</p>
+                <p class="city_p"><b>City Office:</b> &nbsp; 783, D. H. Road Sakherbazar, Kolkata - 700 008
+                </p>
+                <p class="city_p"><b>Ph:</b> &nbsp; 033-2447 3472 &nbsp;&nbsp;&nbsp; <b>Email:</b> &nbsp;
+                    signature.advertising15@gmail.com</p>
+            </td>
+            <!-- <td width="40%" valign="bottom" align="center"><span class="dashed-span"><strong>CIN NO:</strong> U74999WB2016 PTC 215681</span></td> -->
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
+        <tr>
+            <td width="60%" align="right" valign="middle" style="font-weight: bold; font-size: 26px;"><span
+                    style="border: 2px solid #000; width:20%; padding: 8px; border-radius: 10px;">Edit Money
+                    Receipt Voucher</span></td>
+            <td width="20%" align="center" valign="middle"><strong>No.</strong> &nbsp; <span>
+                    <input type="text" id="receipt_number" name="receipt_number"
+                        style="padding:5px ; font-size:15px;text-align: center;" readonly></span></td>
+            <td width="20%" align="center" valign="middle"><strong>Receipt Date:</strong> &nbsp; <span>
+                    <input type="text" id="receipt_date" name="receipt_date" class="datepicker"
+                        style="padding:5px ; font-size:15px;text-align: center;"></span></td>
+        </tr>
+    </table><br>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="5%">&nbsp;</td>
+            <td width="5%" align="left" valign="middle" style="padding:10px 0;">
+                <strong>Received From:</strong>
+            </td>
+            <td align="left" style="padding:10px 0; font-size:22px;">
+                <input size="30" type="text" id="received_from" name="received_from">
+            </td>
+            <td width="10%">&nbsp;</td>
+            <td width="6%" align="left" valign="middle" style="padding:10px 0;"><strong>Amount:--</strong>
+            </td>
+            <td><input size="20" type="text" name="amount" id="amount" style="padding:5px ; font-size:15px;text-align: center;">
+            </td>
+
+            <td width="2%">&nbsp;</td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="5%">&nbsp;</td>
+            <td width="5%" align="left" valign="middle" style="padding:10px 0;">
+                <strong>by :-- </strong>
+            </td>
+            <td><input type="text" name="receipt_mode" id="receipt_mode">
+            </td>
+            <td width="2%">&nbsp;</td>
+            <td width="8%" align="left" valign="middle" style="padding:10px 0;"><strong>check no:--</strong></td>
+            <td>
+                <input type="text" name="reference_no" id="reference_no">
+            </td>
+            <td width="2%">&nbsp;</td>
+            <td width="8%" align="left" valign="middle" style="padding:10px 0;">
+                <label class="form-label" for="bank_name">Bank name:--</label>
+            </td>
+            <td>
+                <select class="form-control" id="bank_name" name="bank_name" data-live-search="true" aria-label="Search"
+                    name="" onchange="myFunction(this.value);">
+                    <!-- <option value="">select Bank</option> -->
+                </select>
+            </td>
+            <td width="2%">&nbsp;</td>
+            <!-- </tr> -->
+            <!-- </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0"> -->
+            <!-- <tr> -->
+            <td width="2%">&nbsp;</td>
+            <!-- <td width="5%">&nbsp;</td> -->
+            <td width="6%" align="left" valign="middle" style="padding:10px 0;">
+                <strong>branch:-- </strong>
+            <td> <input type="text" name="bank_head_office_address" id="bank_head_office_address" readonly></td>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="5%">&nbsp;</td>
+            <td width="10%" align="left" valign="middle" style="padding:10px 0;">
+                <strong> transaction Date:--</strong>
+            </td>
+            <td align="left" valign="margin-left" style="padding:10px 0;">
+                <span><input type="text" name="transaction_date" id="transaction_date" class="datepicker"></span>
+            </td>
+
+            <td width="2%">&nbsp;</td>
+
+            <td width="6%" align="left" valign="middle" style="padding:10px 0;">
+                <strong>against:--</strong>
+            </td>
+            <td align="left" valign="middle" style="padding:20px 0;"><span> <input size="80" ;
+                        type="text" name="remarks" id="remarks" style="padding:10px 0;font-size:large"></span></td>
+            <td width="2%">&nbsp;</td>
+        </tr>
+    </table>
+
+    </table>
+
+    <div width="40%" valign="middle"
+        style="border-left:1px  red; border-bottom:1px solid rgb(160, 38, 38); padding:10px 50px;">
+        <strong>Rs: </strong>
+        ( Rupees <span id="word" style="padding:10px 0;font-size:large"></span>
+        )
+    </div>
+
+    <div align="center" valign="top" style="font-size:18px; font-family:Arial, sans-serif;">
+
+
+        <button onclick="editreceiptamount()" type="button" alert="return('do u want')" align="center"
+            style="color:green;font-size:20px; font-family:Arial, sans-serif;" value="update" class="btn btn-primary"
+            id="btn"> Update </button>
+    </div>
+
+    </td>
+    </tr>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    </table>
+
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="numberToWords.js"></script>
+    <script>
+        var receipt_id = getParameterByName('receipt_id');
+        $(document).ready(function () {
+            //getAppName();
+            isLogin();
+            getPaymentInfo();
+            createDatePicker();
+            populateBankName();
+        });
+        function refresh_all() {
+            $("#bank_name").selectpicker('refresh');
+        }
+        function myFunction() {
+            window.print();
+        }
+
+
+        function populateBankName() {
+
+
+            $.ajax({
+                type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                url: "handler/ajax_edit_receipt_detail.php",
+                data: {
+                    receipt_id: receipt_id,
+                    action_type: 'Bank'
+                },
+                dataType: 'json', // what type of data do we expect back from the server
+                encode: true
+            })
+                // using the done promise callback
+                .done(function (data) {
+                    var other_receipts_bank_id = '';
+                    $.each(data.bank_list_id, function (key, value) {
+                        // alert(value.bank_name);
+                        other_receipts_bank_id = value.bank_id;
+                    });
+
+
+                    var resultHTML = '';
+                    if (data.status) {
+                        resultHTML += '<option value="">Select Bank </option>';
+                        $.each(data.bank_list, function (key, value) {
+
+                            var d = (value.bank_id == other_receipts_bank_id) ? 'selected' : '';
+                            // alert(value.bank_name);
+                            resultHTML += '<option value="' + value.bank_id + '" ' + d + '>' + value.bank_name + '</option>';
+                        });
+                    }
+                    else {
+                        resultHTML = '<option value="">No Records Available</option>';
+                    }
+                    $("#bank_name").html(resultHTML);
+                    $("#bank_name").selectpicker('refresh');
+                    console.log(data);
+                })
+                // using the fail promise callback
+                .fail(function (data) {
+                    console.log(data);
+                });
+        }
+
+        function myFunction() {
+            var bank_id = document.getElementById("bank_name").value;
+
+            $.ajax({
+                type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                url: "handler/ajax_edit_receipt_detail.php",
+                data: { bank_id: bank_id, action_type: 'branch' },
+                dataType: 'json', // what type of data do we expect back from the server
+                encode: true
+            })
+                // using the done promise callback
+                .done(function (data) {
+                    var resultHTML = '';
+                    // $("#bank_head_office_address").val(data.receipt_details.bank_id);
+                    // alert(data.receipt_details.bank_id);
+
+                    if (data.status) {
+                        $.each(data.branch_list, function (key, value) {
+                            // alert(data.branch_list);
+                            resultHTML = '' + value.branch + '';
+                            // alert(resultHTML);
+
+                        });
+                    }
+                    else {
+                        resultHTML = '<span>No Records Available</span>';
+                    }
+                    $("#bank_head_office_address").val(resultHTML);
+
+                })
+                // using the fail promise callback
+                .fail(function (data) {
+                    console.log(data);
+                });
+        }
+        function getPaymentInfo() {
+            $.ajax({
+                type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                url: "handler/ajax_edit_receipt_detail.php",
+                data: { receipt_id: receipt_id, action_type: 'EDIT_RECEIPT_VOUCHER' },
+                dataType: 'json', // what type of data do we expect back from the server
+                encode: true,
+                async: false
+            })
+                // using the done promise callback
+                .done(function (data) {
+                    //alert(data.receipt_details.bank_id);
+                    var resultHTML = '';
+                    var total_day_amount = 0;
+                    $("#receipt_number").val(data.receipt_details.receipt_number);
+                    $("#receipt_date").val(data.receipt_details.receipt_date);
+                    $("#receipt_mode").val(data.receipt_details.receipt_mode);
+                    $("#amount").val(data.receipt_details.amount);
+
+                    $("#remarks").val(data.receipt_details.remarks);
+                    // if (data.receipt_details.received_from) {
+                    //     $("#received_from").html('<b>Received fron</b>: ' + data.receipt_details.received_from);
+                    // }
+                    $("#received_from").val(data.receipt_details.received_from);
+                    if (data.receipt_details.receipt_mode == 'Cash') {
+                        $("#receipt_mode").val('Cash');
+                        //$(".bank_mode").hide();
+                        $(".bank_mode").html("");
+                    }
+                    else {
+                        $("#receipt_mode").val('Bank:');
+                        $("#reference_no").val(data.receipt_details.reference_no);
+                        $("#bank_name").val(data.receipt_details.bank_id);
+                        // $("#bank_name").selectpicker('refresh');
+                        $("#bank_head_office_address").val(data.receipt_details.bank_head_office_address);
+                        $("#transaction_date").val(data.receipt_details.transaction_date);
+                        var word = convert_into_words_from_rupee(data.receipt_details.amount);
+                        $("#word").text(word);
+                    }
+                    // var word = convert_into_words_from_rupee(data.receipt_details.amount);
+                    // $("#word").text(word);
+                })
+
+            //     .fail(function (data) {
+            //         // show any errors
+            //         // best to remove for production
+            //         console.log('fail');
+            //         console.log(data);
+            //     });
+            // createDatePicker();
+        }
+
+        // $(function () {
+
+        //     $(".datepicker").datepicker({ dateFormat: "mm-dd-yyyy" });
+        //     $(".datepicker").datepicker("setDate", $('#receipt_date').val());
+
+        // });
+        // $(function () {
+
+        //     $(".datepicker").datepicker({ dateFormat: "mm-dd-yyyy" });
+        //     $(".datepicker").datepicker("setDate", $('#transaction_date').val());
+
+        // });
+
+        function createDatePicker() {
+
+
+
+            var start_date = $('#receipt_date').datepicker({
+                autoclose: true,
+                todayHighlight: true,
+                format: 'dd-mm-yyyy'
+            }).on('changeDate', function (ev) {
+                if (ev.date.valueOf() > end_date.datepicker("getDate").valueOf()) {
+
+                    end_date.datepicker("update", "");
+                }
+                end_date.datepicker("update");
+            });
+            $('#receipt_date').on('show', function (e) {
+                if (e.date) { $(this).data('stickyDate', e.date); }
+                else { $(this).data('stickyDate', null); }
+            }).on('hide', function (e) {
+                var stickyDate = $(this).data('stickyDate');
+                if (!e.date && stickyDate) { $(this).datepicker('setDate', stickyDate); $(this).data('stickyDate', null); }
+            });
+
+
+            var start_date = $('#transaction_date').datepicker({
+                autoclose: true,
+                todayHighlight: true,
+                format: 'dd-mm-yyyy'
+            }).on('changeDate', function (ev) {
+                if (ev.date.valueOf() > end_date.datepicker("getDate").valueOf()) {
+
+                    end_date.datepicker("update", "");
+                }
+                end_date.datepicker("update");
+            });
+            $('#transaction_date').on('show', function (e) {
+                if (e.date) { $(this).data('stickyDate', e.date); }
+                else { $(this).data('stickyDate', null); }
+            }).on('hide', function (e) {
+                var stickyDate = $(this).data('stickyDate');
+                if (!e.date && stickyDate) { $(this).datepicker('setDate', stickyDate); $(this).data('stickyDate', null); }
+            });
+
+
+        }
+
+        function editreceiptamount() {
+            var value = $("#amount").val();
+            var receipt_mode = $("#receipt_mode").val();
+            var receipt_number = $("#receipt_number").val();
+            var transaction_date = $("#transaction_date").val();
+            var receipt_date = $("#receipt_date").val();
+            var received_from = $("#received_from").val();
+            var reference_no = $("#reference_no").val();
+            var remarks = $("#remarks").val();
+            // var bank_head_office_address = $("#bank_head_office_address").val();
+            var bank_name = $("#bank_name").val();
+            alert(bank_name);
+            console.log(value);
+            $.ajax({
+                type: 'POST',
+                url: "handler/ajax_edit_receipt_detail.php",
+                data: { receipt_id: receipt_id, value: value, receipt_mode: receipt_mode, receipt_number: receipt_number, transaction_date: transaction_date, receipt_date: receipt_date, bank_name: bank_name, received_from: received_from, reference_no: reference_no, remarks: remarks, action_type: 'Edit_receipt' },
+                dataType: 'json',
+                encode: true,
+                async: false
+            })
+                .done(function (data) {
+                    console.log(data);
+
+                    if (data.key = 'S') {
+                        window.location.href = "../other_receipt_list.html";
+
+                    }
+                })
+
+                .fail(function (data) {
+
+                    console.log(data);
+                });
+        }
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                alert("Update is successfully.");
+            });
+        });
+
+        // const amount = document.getElementById('amount');
+        // const word = document.getElementById('word');
+
+        // const inputHandler = function (e) {
+        //     word.innerHTML = e.target.value;
+        // }
+
+        // amount.addEventListener('input', inputHandler);
+        // amount.addEventListener('propertychange', inputHandler);
+        var a = ['', 'one ', 'two ', 'three ', 'four ', 'five ', 'six ', 'seven ', 'eight ', 'nine ', 'ten ', 'eleven ', 'twelve ', 'thirteen ', 'fourteen ', 'fifteen ', 'sixteen ', 'seventeen ', 'eighteen ', 'nineteen '];
+        var b = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+        function inWords(num) {
+            if ((num = num.toString()).length > 9) return 'overflow';
+            n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+            if (!n) return; var str = '';
+            str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore ' : '';
+            str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh ' : '';
+            str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand ' : '';
+            str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'hundred ' : '';
+            str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only ' : '';
+            return str;
+        }
+
+        document.getElementById('amount').onkeyup = function () {
+            document.getElementById('word').innerHTML = inWords(document.getElementById('amount').value);
+        };
+    </script>
+</body>
+
+</html>
